@@ -519,6 +519,7 @@ button { font-family: inherit; cursor: pointer; }
   display: flex; align-items: flex-end; justify-content: space-between;
   gap: 16px;
   color: var(--t-1);
+  min-height: 300px;
 }
 .bento-title {
   font-family: var(--display-font);
