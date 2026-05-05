@@ -57,10 +57,27 @@ const Icon = {
     </svg>
   ),
   logoMark: (p) => (
-    <svg width={p.size||48} height={p.size||48} viewBox="0 0 48 48" aria-hidden="true">
-      <rect width="48" height="48" rx="6" fill="currentColor"/>
-      <path d="M14 18 C14 14, 18 12, 22 13 C26 14, 26 17, 24 18 L18 19 C16 19.5, 16 21, 17.5 22 L26 24 C30 25, 32 28, 30 32 C28 35, 23 36, 18 34 L18 30 C21 31, 25 31, 26 29.5 C27 28, 25.5 27, 22 26 L17 25 C13 24, 12 21, 14 18 Z" fill="#FFE5E1"/>
-      <path d="M30 14 L34 14 L34 32 L30 32 L30 22 L26 28 L24 26 L30 18 Z" fill="#FFE5E1" opacity="0.9"/>
+    <svg width={p.size||48} height={p.size||48} viewBox="0 0 100 100" aria-hidden="true" fill="none">
+      {/* dark background circle */}
+      <circle cx="50" cy="50" r="50" fill="#0e0e0e"/>
+      {/* red outer ring */}
+      <circle cx="50" cy="50" r="46" stroke="#C0392B" strokeWidth="3.5"/>
+      {/* house outline — roof */}
+      <polyline points="22,46 50,22 78,46" stroke="#9CA3AF" strokeWidth="2.8" strokeLinecap="round" strokeLinejoin="round"/>
+      {/* house walls */}
+      <polyline points="30,46 30,74 70,74 70,46" stroke="#9CA3AF" strokeWidth="2.8" strokeLinecap="round" strokeLinejoin="round"/>
+      {/* pipe — vertical drop inside house */}
+      <line x1="42" y1="46" x2="42" y2="62" stroke="#C0392B" strokeWidth="2.6" strokeLinecap="round"/>
+      {/* pipe — horizontal run */}
+      <line x1="42" y1="62" x2="58" y2="62" stroke="#C0392B" strokeWidth="2.6" strokeLinecap="round"/>
+      {/* pipe — short vertical to tap */}
+      <line x1="58" y1="62" x2="58" y2="68" stroke="#C0392B" strokeWidth="2.6" strokeLinecap="round"/>
+      {/* tap body */}
+      <rect x="54" y="67" width="8" height="4" rx="1" stroke="#C0392B" strokeWidth="2" fill="none"/>
+      {/* tap spout */}
+      <line x1="62" y1="69" x2="66" y2="69" stroke="#C0392B" strokeWidth="2.2" strokeLinecap="round"/>
+      {/* water drop */}
+      <circle cx="67" cy="73" r="1.8" fill="#C0392B"/>
     </svg>
   ),
 };
