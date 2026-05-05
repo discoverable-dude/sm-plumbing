@@ -1,33 +1,15 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>About — SM Plumbing &amp; Property Services</title>
-<link rel="icon" type="image/svg+xml" href="favicon.svg"/>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,800;0,900;1,400&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="site.css"/>
-</head>
-<body>
-<div id="root"></div>
+import { ContactSection } from "../../components/ContactSection";
+import { OpenQuoteButton } from "../../components/OpenQuoteButton";
 
-<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
-
-<script type="text/babel" src="tweaks-panel.jsx"></script>
-<script type="text/babel" src="components.jsx"></script>
-<script type="text/babel" src="page-shell.jsx"></script>
-
-<script type="text/babel">
-const { useState, useEffect } = React;
+export const metadata = {
+  title: "About",
+  description: "Run by Shane Mills — a single point of accountability from your first enquiry to the final walk-through. Specialist bathroom installer based in Basildon, Essex.",
+};
 
 function AboutHero() {
   return (
     <section className="page-hero">
-      <div className="page-hero-bg" style={{ backgroundImage: "url(assets/about-portrait.png)" }}/>
+      <div className="page-hero-bg" style={{ backgroundImage: "url(/assets/about-portrait.png)" }}/>
       <div className="page-hero-grad"/>
       <div className="page-hero-inner">
         <div className="eyebrow">
@@ -35,10 +17,10 @@ function AboutHero() {
         </div>
         <h1>
           Specialist Bathroom<br/>
-          Installer in <em>Stanford-le-Hope.</em>
+          Installer in <em>Basildon.</em>
         </h1>
         <p className="lede">
-          Run by Sam McLaughlin — a single point of accountability from your first
+          Run by Shane Mills — a single point of accountability from your first
           enquiry to the final walk-through.
         </p>
       </div>
@@ -82,7 +64,7 @@ function StorySection() {
             <div className="narrative-stat"><div className="num">£7.5k</div><div className="lab">Projects from</div></div>
           </div>
           <div style={{ marginTop: 24, position: "relative", borderRadius: "var(--r-lg)", overflow: "hidden", aspectRatio: "16/10" }}>
-            <div style={{ position: "absolute", inset: 0, backgroundImage: "url(assets/about-craft.png)", backgroundSize: "cover", backgroundPosition: "center" }}/>
+            <div style={{ position: "absolute", inset: 0, backgroundImage: "url(/assets/about-craft.png)", backgroundSize: "cover", backgroundPosition: "center" }}/>
           </div>
         </div>
       </div>
@@ -93,14 +75,14 @@ function StorySection() {
 function QuoteBand() {
   return (
     <section className="quote-band">
-      <div className="quote-band-mark">"</div>
+      <div className="quote-band-mark">&ldquo;</div>
       <div className="quote-band-inner">
         <p className="quote-band-text">
-          We don't fix dripping taps. We build the room you'll spend twenty
+          We don&apos;t fix dripping taps. We build the room you&apos;ll spend twenty
           minutes in every morning for the next ten years — and we build it like
-          we'll have to live with it.
+          we&apos;ll have to live with it.
         </p>
-        <div className="quote-band-att">— Sam McLaughlin · Founder</div>
+        <div className="quote-band-att">— Shane Mills · Founder</div>
       </div>
     </section>
   );
@@ -116,7 +98,6 @@ function ApproachBento() {
           Specialist installers, not generalist builders — and a pace deliberately
           matched to high-end finishing work.
         </p>
-
         <div className="approach-bento">
           <div className="ab-card ab-tech">
             <div className="ab-card-mark"/>
@@ -129,14 +110,14 @@ function ApproachBento() {
             <div className="ab-card-mark"/>
             <div>
               <h3>Quality Over Speed</h3>
-              <p>3–4 weeks per project, fixed at quote stage. We don't book three jobs at once and shuffle the schedule.</p>
+              <p>3–4 weeks per project, fixed at quote stage. We don&apos;t book three jobs at once and shuffle the schedule.</p>
             </div>
           </div>
           <div className="ab-card ab-local">
             <div className="ab-card-mark"/>
             <div>
-              <h3>Stanford-le-Hope Focus</h3>
-              <p>Local-first scheduling. Most projects within a 30-mile radius — we know the housing stock and the regs.</p>
+              <h3>Basildon Focus</h3>
+              <p>Local-first scheduling. Most projects within a 30-mile radius of Basildon — we know the housing stock and the regs.</p>
             </div>
           </div>
           <div className="ab-card ab-material">
@@ -152,23 +133,14 @@ function ApproachBento() {
   );
 }
 
-function AboutApp() {
+export default function AboutPage() {
   return (
-    <PageShell current="about" screenLabel="04 About">
-      {({ openQuote }) => (
-        <>
-          <AboutHero/>
-          <StorySection/>
-          <QuoteBand/>
-          <ApproachBento/>
-          <ContactSection openQuote={openQuote}/>
-        </>
-      )}
-    </PageShell>
+    <main>
+      <AboutHero/>
+      <StorySection/>
+      <QuoteBand/>
+      <ApproachBento/>
+      <ContactSection/>
+    </main>
   );
 }
-
-ReactDOM.createRoot(document.getElementById("root")).render(<AboutApp/>);
-</script>
-</body>
-</html>

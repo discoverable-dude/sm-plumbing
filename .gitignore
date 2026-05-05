@@ -1,0 +1,9 @@
+# Next.js
+.next/
+out/
+
+# Dependencies
+node_modules/
+
+# Build artifacts
+package-lock.json
