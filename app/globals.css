@@ -1352,7 +1352,6 @@ button { font-family: inherit; cursor: pointer; }
 
 /* ───────── Gallery (Our Work) ───────── */
 .gallery {
-  padding: var(--section-py) var(--gutter);
   background: var(--bg-0);
 }
 .gallery-inner {
