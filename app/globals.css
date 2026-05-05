@@ -1354,6 +1354,7 @@ button { font-family: inherit; cursor: pointer; }
 /* ───────── Gallery (Our Work) ───────── */
 .gallery {
   background: var(--bg-0);
+  padding: 0px, 20px, 0px, 20px;
 }
 .gallery-inner {
   max-width: var(--maxw); margin: 0 auto;
