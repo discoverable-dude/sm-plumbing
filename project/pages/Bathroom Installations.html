@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Bathroom Installations — SM Plumbing &amp; Property Services</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,800;0,900;1,400&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+<div id="root"></div>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+<script type="text/babel" src="../tweaks-panel.jsx"></script>
+<script type="text/babel" src="../components.jsx"></script>
+<script type="text/babel" src="../page-shell.jsx"></script>
+
+<script type="text/babel">
+const { useState, useEffect } = React;
+
+function InstallationsHero({ openQuote }) {
+  return (
+    <section className="page-hero">
+      <div className="page-hero-bg" style={{ backgroundImage: "url(../assets/install-hero.png)" }}/>
+      <div className="page-hero-grad"/>
+      <div className="page-hero-inner">
+        <div className="eyebrow">
+          <span className="eyebrow-dot"/> Service · Bathroom Installations
+        </div>
+        <h1>
+          Expert Bathroom<br/>
+          Installations, <em>Managed<br/>
+          Start to Finish.</em>
+        </h1>
+        <p className="lede">
+          Full-scope renovations: design, plumbing, electrics, tiling, plastering and finishing —
+          all under one specialist roof. Typical 3–4 week build. Projects from £7,500.
+        </p>
+        <div className="hero-actions" style={{ marginTop: 20 }}>
+          <button onClick={openQuote} className="btn btn-primary">
+            Get a Free Quote <Icon.arrow size={16}/>
+          </button>
+          <a href="#process" className="btn btn-ghost">See the Process</a>
+        </div>
+        <div className="page-hero-meta">
+          <span className="dot"/>
+          120+ Bathrooms Fitted
+          <span className="dot"/>
+          10-Year Workmanship Guarantee
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function ServicesBento() {
+  return (
+    <section className="sec" id="services">
+      <div className="sec-inner">
+        <div className="sec-eyebrow"><span className="rule"/> What We Build</div>
+        <h2 className="h2">A complete renovation, <br/>delivered by one specialist team.</h2>
+        <p className="body" style={{ maxWidth: '60ch' }}>
+          We don't subcontract the trades that matter — every part of your bathroom is built
+          by people who answer directly to you.
+        </p>
+
+        <div className="services-bento">
+          <div className="svc-card svc-card-hero">
+            <div className="svc-card-img" style={{ backgroundImage: "url(../assets/showcase-1.png)" }}/>
+            <div className="svc-card-img-grad"/>
+            <div className="svc-card-content">
+              <span className="svc-card-eyebrow">Flagship Service</span>
+              <h3>Full Bathroom Fit-outs</h3>
+              <p>Complete strip-out, design coordination, and finished room. From concept brief to handover keys — typically 3–4 weeks on site.</p>
+            </div>
+            <div className="svc-card-content">
+              <span className="svc-card-num">01</span>
+            </div>
+          </div>
+
+          <div className="svc-card svc-card-tall">
+            <div className="svc-card-content">
+              <span className="svc-card-eyebrow">Specialist</span>
+              <h3>Wet Rooms<br/>&amp; Walk-ins</h3>
+              <p>Fully tanked, gradient-fall floors, frameless screens. Built for daily use, engineered to never leak.</p>
+            </div>
+            <div className="svc-card-content">
+              <span className="svc-card-num">02</span>
+            </div>
+          </div>
+
+          <div className="svc-card svc-card-wide" id="tiling">
+            <div className="svc-card-content">
+              <span className="svc-card-eyebrow">Craft</span>
+              <h3>Specialist Tiling</h3>
+              <p>Large-format porcelain, mitred edges, book-matched stone, and Schlüter trim systems applied with precision.</p>
+            </div>
+          </div>
+
+          <div className="svc-card svc-card-sm">
+            <div className="svc-card-content">
+              <span className="svc-card-eyebrow">Trade</span>
+              <h3>Electrical Work</h3>
+              <p>Zoned ambient lighting, UFH, smart mirror integration. Certified.</p>
+            </div>
+          </div>
+
+          <div className="svc-card svc-card-sm">
+            <div className="svc-card-content">
+              <span className="svc-card-eyebrow">Trade</span>
+              <h3>Plastering</h3>
+              <p>Ultra-smooth finishes prepped for steam-heavy environments.</p>
+            </div>
+          </div>
+
+          <div className="svc-card svc-card-sm">
+            <div className="svc-card-content">
+              <span className="svc-card-eyebrow">Trade</span>
+              <h3>Plumbing</h3>
+              <p>Internal valve engineering and high-flow drainage solutions.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function InstallationsApp() {
+  return (
+    <PageShell current="installations" screenLabel="02 Bathroom Installations">
+      {({ openQuote }) => (
+        <>
+          <InstallationsHero openQuote={openQuote}/>
+          <ServicesBento/>
+          <Process/>
+          <Testimonial/>
+          <ContactSection openQuote={openQuote}/>
+        </>
+      )}
+    </PageShell>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById("root")).render(<InstallationsApp/>);
+</script>
+</body>
+</html>

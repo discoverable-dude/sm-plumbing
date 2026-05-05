@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>SM Plumbing &amp; Property Services — Specialist Bathroom Installations, Essex</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,800;0,900;1,400&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css"/>
+</head>
+<body>
+<div id="root"></div>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+<script type="text/babel" src="tweaks-panel.jsx"></script>
+<script type="text/babel" src="components.jsx"></script>
+
+<script type="text/babel">
+const { useState, useEffect } = React;
+
+const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
+  "brandColor": "#C0392B",
+  "heroVariant": "overlay",
+  "density": "default",
+  "displayFont": "Manrope",
+  "showProcess": true,
+  "showTestimonial": true
+}/*EDITMODE-END*/;
+
+function App() {
+  const [tweaks, setTweak] = useTweaks(TWEAK_DEFAULTS);
+  const [scrolled, setScrolled] = useState(false);
+  const [quoteOpen, setQuoteOpen] = useState(false);
+  const openQuote = () => setQuoteOpen(true);
+  const closeQuote = () => setQuoteOpen(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 24);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  // apply css var changes
+  useEffect(() => {
+    document.documentElement.style.setProperty("--brand", tweaks.brandColor);
+    // derive a soft brand-2 cream from the brand by mixing with white
+    // simple: keep cream same when brand is default; otherwise derive
+    const root = document.documentElement;
+    if (tweaks.brandColor.toLowerCase() === "#c0392b") {
+      root.style.setProperty("--brand-2", "#FFE5E1");
+      root.style.setProperty("--warm", "#E1BFB9");
+    } else {
+      root.style.setProperty("--brand-2", "#F8F7F4");
+      root.style.setProperty("--warm", "#C9C9C9");
+    }
+    root.dataset.density = tweaks.density;
+    root.style.setProperty("--display-font", `"${tweaks.displayFont}", system-ui, sans-serif`);
+  }, [tweaks]);
+
+  return (
+    <>
+      <TopNav scrolled={scrolled} openQuote={openQuote} />
+      <main data-screen-label="01 Home">
+        <Hero variant={tweaks.heroVariant} openQuote={openQuote} />
+        <SpecialistSection />
+        <ValueProps />
+        {tweaks.showProcess && <Process />}
+        {tweaks.showTestimonial && <Testimonial />}
+        <ServiceAreas />
+        <ContactSection openQuote={openQuote} />
+      </main>
+      <Footer />
+      <QuoteWizard open={quoteOpen} onClose={closeQuote} />
+
+      <TweaksPanel title="Tweaks">
+        <TweakSection title="Hero">
+          <TweakRadio
+            label="Variant"
+            value={tweaks.heroVariant}
+            onChange={(v) => setTweak("heroVariant", v)}
+            options={[
+              { value: "overlay", label: "Overlay" },
+              { value: "split", label: "Split" },
+              { value: "minimal", label: "Editorial" },
+            ]}
+          />
+        </TweakSection>
+        <TweakSection title="Brand">
+          <TweakColor
+            label="Accent"
+            value={tweaks.brandColor}
+            onChange={(v) => setTweak("brandColor", v)}
+          />
+          <TweakRadio
+            label="Display Font"
+            value={tweaks.displayFont}
+            onChange={(v) => setTweak("displayFont", v)}
+            options={[
+              { value: "Manrope", label: "Manrope" },
+              { value: "Fraunces", label: "Fraunces" },
+              { value: "Work Sans", label: "Work Sans" },
+            ]}
+          />
+        </TweakSection>
+        <TweakSection title="Layout">
+          <TweakRadio
+            label="Density"
+            value={tweaks.density}
+            onChange={(v) => setTweak("density", v)}
+            options={[
+              { value: "compact", label: "Compact" },
+              { value: "default", label: "Default" },
+              { value: "airy", label: "Airy" },
+            ]}
+          />
+          <TweakToggle
+            label="Process timeline"
+            value={tweaks.showProcess}
+            onChange={(v) => setTweak("showProcess", v)}
+          />
+          <TweakToggle
+            label="Testimonial"
+            value={tweaks.showTestimonial}
+            onChange={(v) => setTweak("showTestimonial", v)}
+          />
+        </TweakSection>
+      </TweaksPanel>
+    </>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+</script>
+</body>
+</html>
