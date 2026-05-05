@@ -1787,7 +1787,6 @@ button { font-family: inherit; cursor: pointer; }
   .hero { min-height: 0; }
   .hero-overlay { padding: 120px var(--gutter) 72px; }
   .hero-content { text-align: left; }
-  .hero-actions { justify-content: flex-start; }
   .lede { font-size: 17px; margin-inline: 0; text-align: left; }
   .eyebrow { font-size: 10px; letter-spacing: 0.12em; padding: 7px 12px; }
   .page-hero { padding: 120px var(--gutter) 56px; }
@@ -1799,7 +1798,59 @@ button { font-family: inherit; cursor: pointer; }
   .qw-q { font-size: 24px; }
   .trust-row { grid-template-columns: 1fr 1fr; }
   .gallery-grid { gap: 10px; }
-  .sec { padding: calc(var(--section-py) * 0.65) var(--gutter); }
+  .sec { padding: calc(var(--section-py) * 0.5) var(--gutter); }
+
+  /* Fix 1: Nav — hide CTA button, keep hamburger only; allow brand to shrink */
+  .nav-cta .btn { display: none; }
+  .brand { flex-shrink: 1; min-width: 0; }
+
+  /* Fix 2: Hero CTA buttons — stack vertically, full-width */
+  .hero-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+  .hero-actions .btn {
+    width: 100%;
+    justify-content: center;
+    padding: 16px 20px;
+    font-size: 14px;
+  }
+
+  /* Fix 3: Section eyebrow labels — allow wrapping */
+  .sec-eyebrow {
+    white-space: normal;
+    flex-wrap: wrap;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+  }
+
+  /* Fix 4: Town hero heading — reduce clamp minimum */
+  .town-hero { padding: 120px var(--gutter) 56px; }
+  .town-hero h1 { font-size: clamp(44px, 11vw, 72px); }
+  .town-hero-inner { min-height: 0; }
+
+  /* Fix 5: About page stats grid — reduce padding and font sizes */
+  .narrative-stat { padding: 18px 16px; }
+  .narrative-stat .num { font-size: 30px; }
+  .narrative-stat .lab { font-size: 10px; letter-spacing: 0.1em; }
+
+  /* Fix 6: Inner page hero meta — allow wrapping */
+  .page-hero-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+  }
+
+  /* Fix 7: Footer — collapse to single column */
+  .footer-inner { grid-template-columns: 1fr; gap: 32px; }
+  .footer { padding: 48px var(--gutter) 24px; }
+
+  /* Fix 8: CTA tag — allow wrapping */
+  .cta-tag { white-space: normal; flex-wrap: wrap; font-size: 10px; max-width: 100%; }
 }
 
 @media (prefers-reduced-motion: reduce) {
