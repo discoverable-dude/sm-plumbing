@@ -36,11 +36,11 @@ function PageShell({ current, screenLabel, children }) {
 
   return (
     <>
-      <TopNav scrolled={scrolled} openQuote={openQuote} current={current} base="../" />
+      <TopNav scrolled={scrolled} openQuote={openQuote} current={current} base="" />
       <main data-screen-label={screenLabel}>
         {typeof children === "function" ? children({ openQuote }) : children}
       </main>
-      <Footer base="../" />
+      <Footer base="" />
       <QuoteWizard open={quoteOpen} onClose={closeQuote} />
       <TweaksPanel title="Tweaks">
         <TweakSection title="Brand">

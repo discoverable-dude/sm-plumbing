@@ -6,7 +6,7 @@ function TownPage({ townKey }) {
       {({ openQuote }) => (
         <>
           <section className="town-hero">
-            <div className="town-hero-bg" style={{ backgroundImage: "url(../assets/town-hero.png)" }}/>
+            <div className="town-hero-bg" style={{ backgroundImage: "url(assets/town-hero.png)" }}/>
             <div className="town-hero-grad"/>
             <div className="town-hero-inner">
               <div>
@@ -23,7 +23,7 @@ function TownPage({ townKey }) {
                 </div>
                 <div className="hero-actions" style={{ marginTop: 36 }}>
                   <button onClick={openQuote} className="btn btn-primary">Get a Free Quote <Icon.arrow size={16}/></button>
-                  <a href="Our Work.html" className="btn btn-ghost">View Portfolio</a>
+                  <a href="our-work" className="btn btn-ghost">View Portfolio</a>
                 </div>
               </div>
               <div className="town-hero-card">
@@ -40,7 +40,7 @@ function TownPage({ townKey }) {
 
           <section className="featured-proj">
             <div className="featured-proj-inner">
-              <div className="featured-proj-img" style={{ backgroundImage: "url(../assets/town-secondary.png)" }}>
+              <div className="featured-proj-img" style={{ backgroundImage: "url(assets/town-secondary.png)" }}>
                 <span className="featured-proj-tag">Recent · {t.name}</span>
                 <div className="featured-proj-img-grad"/>
               </div>

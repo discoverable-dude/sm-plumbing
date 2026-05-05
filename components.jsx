@@ -84,10 +84,10 @@ const Icon = {
 
 // ───────────── Top Nav ─────────────
 const NAV_LINKS = [
-  { label: "About", href: "pages/About.html", key: "about" },
-  { label: "Bathroom Installations", href: "pages/Bathroom Installations.html", key: "installations" },
-  { label: "Our Work", href: "pages/Our Work.html", key: "work" },
-  { label: "Contact", href: "pages/Contact.html", key: "contact" },
+  { label: "About", href: "about", key: "about" },
+  { label: "Bathroom Installations", href: "bathroom-installations", key: "installations" },
+  { label: "Our Work", href: "our-work", key: "work" },
+  { label: "Contact", href: "contact", key: "contact" },
 ];
 
 function TopNav({ scrolled, openQuote, current, base = "" }) {
@@ -375,11 +375,11 @@ function Testimonial() {
 // ───────────── Section: Service Areas ─────────────
 function ServiceAreas({ base = "" }) {
   const areas = [
-    { name: "Basildon",    drive: "Home base",     code: "SS13 – SS16", href: "pages/Bathroom Fitter Basildon.html" },
-    { name: "Billericay",  drive: "10 min drive",  code: "CM11 – CM12", href: "pages/Bathroom Fitter Billericay.html" },
-    { name: "Brentwood",   drive: "15 min drive",  code: "CM13 – CM15", href: "pages/Bathroom Fitter Brentwood.html" },
-    { name: "Romford",     drive: "20 min drive",  code: "RM1 – RM7",   href: "pages/Bathroom Fitter Romford.html" },
-    { name: "Chelmsford",  drive: "25 min drive",  code: "CM1 – CM3",   href: "pages/Bathroom Fitter Chelmsford.html" },
+    { name: "Basildon",    drive: "Home base",     code: "SS13 – SS16", href: "bathroom-fitter-basildon" },
+    { name: "Billericay",  drive: "10 min drive",  code: "CM11 – CM12", href: "bathroom-fitter-billericay" },
+    { name: "Brentwood",   drive: "15 min drive",  code: "CM13 – CM15", href: "bathroom-fitter-brentwood" },
+    { name: "Romford",     drive: "20 min drive",  code: "RM1 – RM7",   href: "bathroom-fitter-romford" },
+    { name: "Chelmsford",  drive: "25 min drive",  code: "CM1 – CM3",   href: "bathroom-fitter-chelmsford" },
   ];
   return (
     <section className="sec areas">
@@ -714,11 +714,11 @@ function Select({ label, value, onChange, options }) {
 
 // ───────────── Footer ─────────────
 const TOWN_PAGES = [
-  { name: "Basildon",   href: "Bathroom Fitter Basildon.html"   },
-  { name: "Brentwood",  href: "Bathroom Fitter Brentwood.html"  },
-  { name: "Billericay", href: "Bathroom Fitter Billericay.html" },
-  { name: "Romford",    href: "Bathroom Fitter Romford.html"    },
-  { name: "Chelmsford", href: "Bathroom Fitter Chelmsford.html" },
+  { name: "Basildon",   href: "bathroom-fitter-basildon"   },
+  { name: "Brentwood",  href: "bathroom-fitter-brentwood"  },
+  { name: "Billericay", href: "bathroom-fitter-billericay" },
+  { name: "Romford",    href: "bathroom-fitter-romford"    },
+  { name: "Chelmsford", href: "bathroom-fitter-chelmsford" },
 ];
 
 function Footer({ base = "" }) {
@@ -741,16 +741,16 @@ function Footer({ base = "" }) {
         <div className="foot-col">
           <div className="foot-h">SERVICE AREAS</div>
           <ul className="foot-list">
-            {TOWN_PAGES.map(a => <li key={a.name}><a href={base + "pages/" + a.href}>{a.name}</a></li>)}
+            {TOWN_PAGES.map(a => <li key={a.name}><a href={base + a.href}>{a.name}</a></li>)}
           </ul>
         </div>
         <div className="foot-col">
           <div className="foot-h">SERVICES</div>
           <ul className="foot-list">
-            <li><a href={base + "pages/Bathroom Installations.html"}>Full Bathroom Installations</a></li>
-            <li><a href={base + "pages/Bathroom Installations.html#wetrooms"}>Wet Rooms</a></li>
-            <li><a href={base + "pages/Bathroom Installations.html#tiling"}>Tiling &amp; Stonework</a></li>
-            <li><a href={base + "pages/Our Work.html"}>Project Portfolio</a></li>
+            <li><a href={base + "bathroom-installations"}>Full Bathroom Installations</a></li>
+            <li><a href={base + "bathroom-installations#wetrooms"}>Wet Rooms</a></li>
+            <li><a href={base + "bathroom-installations#tiling"}>Tiling &amp; Stonework</a></li>
+            <li><a href={base + "our-work"}>Project Portfolio</a></li>
           </ul>
         </div>
         <div className="foot-col">
