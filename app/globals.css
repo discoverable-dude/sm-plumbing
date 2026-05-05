@@ -497,6 +497,7 @@ button { font-family: inherit; cursor: pointer; }
   background-position: center;
   display: flex; flex-direction: column; justify-content: flex-end;
   transition: transform .35s ease;
+  min-height: 300px;
 }
 .bento::before {
   content: ""; position: absolute; inset: 0;
@@ -1352,7 +1353,10 @@ button { font-family: inherit; cursor: pointer; }
 
 /* ───────── Gallery (Our Work) ───────── */
 .gallery {
-  padding: var(--section-py) var(--gutter);
+  padding-top: calc(var(--section-py) / 2);
+  padding-bottom: var(--section-py);
+  padding-left: var(--gutter);
+  padding-right: var(--gutter);
   background: var(--bg-0);
 }
 .gallery-inner {
