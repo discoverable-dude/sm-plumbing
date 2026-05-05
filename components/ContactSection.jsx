@@ -52,7 +52,7 @@ function QuickContactForm() {
   );
 }
 
-export function ContactSection() {
+export function ContactSection({ hideDescriptions = false }) {
   const openQuote = useOpenQuote();
 
   return (
@@ -66,7 +66,7 @@ export function ContactSection() {
           <div className="cta-card cta-quick">
             <div className="cta-tag">Just a question</div>
             <h3 className="cta-title">Contact us</h3>
-            <p className="cta-desc">A quick message — perfect if you&apos;re early in your thinking, want availability, or have a one-off plumbing job.</p>
+            {!hideDescriptions && <p className="cta-desc">A quick message — perfect if you&apos;re early in your thinking, want availability, or have a one-off plumbing job.</p>}
             <QuickContactForm/>
             <div className="cta-or">
               <span/>or call direct<span/>
@@ -83,7 +83,7 @@ export function ContactSection() {
             <div className="cta-quote-inner">
               <div className="cta-tag cta-tag-light">Ready to scope it</div>
               <h3 className="cta-title cta-title-light">Get a Quote</h3>
-              <p className="cta-desc cta-desc-light">A guided 9-step questionnaire that captures everything Shane needs to write a fixed-price quote — usually back within one working day.</p>
+              {!hideDescriptions && <p className="cta-desc cta-desc-light">A guided 9-step questionnaire that captures everything Shane needs to write a fixed-price quote — usually back within one working day.</p>}
               <ul className="cta-quote-feats">
                 <li><span className="cqf-num">9</span><span>structured questions</span></li>
                 <li><span className="cqf-num">~3</span><span>minutes to complete</span></li>

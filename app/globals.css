@@ -519,7 +519,6 @@ button { font-family: inherit; cursor: pointer; }
   display: flex; align-items: flex-end; justify-content: space-between;
   gap: 16px;
   color: var(--t-1);
-  min-height: 300px;
 }
 .bento-title {
   font-family: var(--display-font);
@@ -1353,8 +1352,8 @@ button { font-family: inherit; cursor: pointer; }
 
 /* ───────── Gallery (Our Work) ───────── */
 .gallery {
+  padding: var(--section-py) var(--gutter);
   background: var(--bg-0);
-  padding: 0px, 20px, 0px, 20px;
 }
 .gallery-inner {
   max-width: var(--maxw); margin: 0 auto;

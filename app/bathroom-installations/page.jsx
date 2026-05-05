@@ -28,7 +28,7 @@ function InstallationsHero() {
           Full-scope renovations: design, plumbing, electrics, tiling, plastering and finishing —
           all under one specialist roof. Typical 3–4 week build. Projects from £7,500.
         </p>
-        <div className="hero-actions" style={{ marginTop: 20 }}>
+        <div className="hero-actions" style={{ marginTop: 20, justifyContent: "center" }}>
           <OpenQuoteButton label="Get a Free Quote"/>
           <Link href="#process" className="btn btn-ghost">See the Process</Link>
         </div>
@@ -82,12 +82,18 @@ function ServicesBento() {
               <h3>Specialist Tiling</h3>
               <p>Large-format porcelain, mitred edges, book-matched stone, and Schlüter trim systems applied with precision.</p>
             </div>
+            <div className="svc-card-content">
+              <span className="svc-card-num">03</span>
+            </div>
           </div>
           <div className="svc-card svc-card-sm">
             <div className="svc-card-content">
               <span className="svc-card-eyebrow">Trade</span>
               <h3>Electrical Work</h3>
               <p>Zoned ambient lighting, UFH, smart mirror integration. Certified.</p>
+            </div>
+            <div className="svc-card-content">
+              <span className="svc-card-num">04</span>
             </div>
           </div>
           <div className="svc-card svc-card-sm">
@@ -96,12 +102,18 @@ function ServicesBento() {
               <h3>Plastering</h3>
               <p>Ultra-smooth finishes prepped for steam-heavy environments.</p>
             </div>
+            <div className="svc-card-content">
+              <span className="svc-card-num">05</span>
+            </div>
           </div>
           <div className="svc-card svc-card-sm">
             <div className="svc-card-content">
               <span className="svc-card-eyebrow">Trade</span>
               <h3>Plumbing</h3>
               <p>Internal valve engineering and high-flow drainage solutions.</p>
+            </div>
+            <div className="svc-card-content">
+              <span className="svc-card-num">06</span>
             </div>
           </div>
         </div>
@@ -117,7 +129,7 @@ export default function InstallationsPage() {
       <ServicesBento/>
       <Process/>
       <Testimonial/>
-      <ContactSection/>
+      <ContactSection hideDescriptions/>
     </main>
   );
 }
