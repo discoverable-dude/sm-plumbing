@@ -32,7 +32,7 @@ export const metadata = {
     default: "SM Plumbing & Property Services — Specialist Bathroom Installations, Essex",
     template: "%s — SM Plumbing & Property Services",
   },
-  description: "Specialist bathroom fitter covering Basildon, Brentwood, Billericay, Romford and Chelmsford. Full project management, fixed-price quotes, 10-year guarantee.",
+  description: "Specialist bathroom fitter covering Basildon, Brentwood, Billericay, Hornchurch and Chelmsford. Full project management, fixed-price quotes, 12-month guarantee.",
   icons: {
     icon: "/favicon.svg",
   },

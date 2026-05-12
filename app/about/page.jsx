@@ -51,7 +51,7 @@ function StorySection() {
             by us, not for us.
           </p>
           <p>
-            Our work is concentrated in Essex — Basildon, Brentwood, Billericay, Romford
+            Our work is concentrated in Essex — Basildon, Brentwood, Billericay, Hornchurch
             and Chelmsford — close enough that we can be on site within an hour if anything
             ever needs attention.
           </p>

@@ -5,7 +5,7 @@ const TOWN_PAGES = [
   { name: "Basildon",   href: "/bathroom-fitter-basildon"   },
   { name: "Brentwood",  href: "/bathroom-fitter-brentwood"  },
   { name: "Billericay", href: "/bathroom-fitter-billericay" },
-  { name: "Romford",    href: "/bathroom-fitter-romford"    },
+  { name: "Hornchurch", href: "/bathroom-fitter-hornchurch" },
   { name: "Chelmsford", href: "/bathroom-fitter-chelmsford" },
 ];
 

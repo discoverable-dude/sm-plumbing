@@ -25,7 +25,7 @@ function HeroOverlay() {
         </h1>
         <p className="lede">
           Specialist bathroom fitter covering Basildon, Brentwood,<br/>
-          Billericay, Romford and Chelmsford.
+          Billericay, Hornchurch and Chelmsford.
         </p>
         <div className="hero-actions">
           <OpenQuoteButton label="Get a Free Quote"/>
@@ -54,7 +54,7 @@ function HeroSplit() {
         </h1>
         <p className="lede">
           A specialist bathroom fitter covering Basildon, Brentwood,
-          Billericay, Romford and Chelmsford. Full project management,
+          Billericay, Hornchurch and Chelmsford. Full project management,
           one accountable trade, no hidden extras.
         </p>
         <div className="hero-actions">
@@ -94,7 +94,7 @@ function HeroMinimal() {
         <div className="hero-min-cap">
           A 4-week, single-trade methodology — from first stud to the final
           sealant bead. Covering Basildon, Brentwood, Billericay,
-          Romford and Chelmsford.
+          Hornchurch and Chelmsford.
         </div>
       </div>
       <div className="hero-min-foot">

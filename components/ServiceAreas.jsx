@@ -5,7 +5,7 @@ const AREAS = [
   { name: "Basildon",   drive: "Home base",    code: "SS13 – SS16", href: "/bathroom-fitter-basildon" },
   { name: "Billericay", drive: "20 min drive", code: "CM11 – CM12", href: "/bathroom-fitter-billericay" },
   { name: "Brentwood",  drive: "30 min drive", code: "CM13 – CM15", href: "/bathroom-fitter-brentwood" },
-  { name: "Romford",    drive: "40 min drive", code: "RM1 – RM7",   href: "/bathroom-fitter-romford" },
+  { name: "Hornchurch", drive: "40 min drive", code: "RM11 – RM13", href: "/bathroom-fitter-hornchurch" },
   { name: "Chelmsford", drive: "35 min drive", code: "CM1 – CM3",   href: "/bathroom-fitter-chelmsford" },
 ];
 

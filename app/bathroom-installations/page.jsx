@@ -36,7 +36,7 @@ function InstallationsHero() {
           <span className="dot"/>
           120+ Bathrooms Fitted
           <span className="dot"/>
-          10-Year Workmanship Guarantee
+          12-Month Guarantee
         </div>
       </div>
     </section>

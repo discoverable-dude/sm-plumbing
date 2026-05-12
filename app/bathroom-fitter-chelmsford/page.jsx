@@ -7,7 +7,7 @@ const t = TOWN_DATA.chelmsford;
 
 export const metadata = {
   title: `Bathroom Fitter ${t.name}`,
-  description: `Specialist bathroom fitter in ${t.name} (${t.postcodes}). ${t.blurb} Free survey, fixed-price quote, 10-year guarantee.`,
+  description: `Specialist bathroom fitter in ${t.name} (${t.postcodes}). ${t.blurb} Free survey, fixed-price quote, 12-month guarantee.`,
 };
 
 export default function ChelmsfordPage() {
@@ -35,7 +35,7 @@ function TownHero({ t }) {
           </h1>
           <p className="lede" style={{ margin: 0, maxWidth: 480 }}>{t.blurb}</p>
           <div className="town-hero-pills">
-            <span className="town-hero-pill">10-Year Guarantee</span>
+            <span className="town-hero-pill">12-Month Guarantee</span>
             <span className="town-hero-pill">Fully Managed</span>
             <span className="town-hero-pill">From £7,500</span>
           </div>
@@ -111,7 +111,7 @@ function WhyChooseUs({ t }) {
           </div>
         </div>
         <div className="trust-row">
-          <div className="trust-badge"><div className="trust-badge-h">10-Year Guarantee</div><p className="trust-badge-p">Workmanship guaranteed</p></div>
+          <div className="trust-badge"><div className="trust-badge-h">12-Month Guarantee</div><p className="trust-badge-p">Workmanship guaranteed</p></div>
           <div className="trust-badge"><div className="trust-badge-h">Fully Insured</div><p className="trust-badge-p">£2m public liability</p></div>
           <div className="trust-badge"><div className="trust-badge-h">Fixed Price</div><p className="trust-badge-p">Quoted at survey, honoured</p></div>
           <div className="trust-badge"><div className="trust-badge-h">Free Survey</div><p className="trust-badge-p">No-obligation, on-site</p></div>
