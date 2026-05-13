@@ -49,7 +49,7 @@ export function TopNav({ current }) {
             ))}
           </nav>
           <div className="nav-cta">
-            <a href="tel:07795514198" className="phone-link"><Phone size={14}/> 0779 5514198</a>
+            <a href="tel:07795514198" className="phone-link"><Phone size={14}/> 07795 514198</a>
             <button onClick={openQuote} className="btn btn-primary btn-sm">Get a Quote</button>
             <button className="nav-hamburger" onClick={() => setDrawerOpen(true)} aria-label="Open menu">
               <Menu size={20}/>
@@ -64,7 +64,7 @@ export function TopNav({ current }) {
           <Link key={l.key} href={l.href} data-active={current === l.key ? "true" : undefined}
             onClick={() => setDrawerOpen(false)}>{l.label}</Link>
         ))}
-        <a href="tel:07795514198" className="nav-drawer-phone"><Phone size={16}/> 0779 5514198</a>
+        <a href="tel:07795514198" className="nav-drawer-phone"><Phone size={16}/> 07795 514198</a>
         <button onClick={() => { setDrawerOpen(false); openQuote(); }}
           className="btn btn-primary" style={{ marginTop: 8 }}>
           Get a Free Quote <Arrow size={16}/>
