@@ -7,13 +7,42 @@ export const metadata = {
   description: "A selection of recently completed bathroom renovations across Essex. Every project delivered by our own team — no third-party contractors.",
 };
 
-const PROJECTS = [
-  { loc: "BASILDON",   title: "High-End Tiling Detail",  desc: "Book-matched marble, mitred edges, full mosaic feature wall.", img: "/assets/showcase-1.png", cls: "gal-feature" },
-  { loc: "CHELMSFORD", title: "Bespoke Vanity Unit",     desc: "Wall-hung oak cabinetry with integrated lighting.",            img: "/assets/showcase-2.png", cls: "gal-tall" },
-  { loc: "BILLERICAY", title: "Modern Shower System",    desc: "Frameless glass, brushed brass thermostatic kit.",             img: "/assets/showcase-3.png", cls: "gal-wide" },
-  { loc: "ROMFORD",    title: "Freestanding Bath Setup", desc: "Wall-mounted bath fill, microcement floor, recessed shelving.", img: "/assets/about-detail.png", cls: "gal-sm" },
-  { loc: "BRENTWOOD",  title: "Family Wet Room",         desc: "Full tanking, gradient floor, twin shower zones.",             img: "/assets/contact.png",       cls: "gal-sm" },
-  { loc: "CHELMSFORD", title: "Compact Cloakroom",       desc: "Maximum storage, large-format porcelain, brass fittings.",     img: "/assets/about-craft.png",   cls: "gal-wide" },
+const CASE_STUDIES = [
+  {
+    num: "01",
+    loc: "Basildon",
+    title: "Full Wet Room Conversion",
+    desc: "Complete strip-out to brick. Re-routed plumbing, tanked walls and floor, large-format terrazzo tiling, wall-hung vanity and rain-head shower. The room was reconfigured from a standard bathroom layout.",
+    cols: 4,
+    images: [
+      { src: "/assets/project3_before.jpg", label: "BEFORE" },
+      { src: "/assets/project3_during.jpg", label: "DURING" },
+      { src: "/assets/project3_after_1.jpg", label: "AFTER" },
+      { src: "/assets/project3_after_2.jpg", label: "AFTER" },
+    ],
+  },
+  {
+    num: "02",
+    loc: "Billericay",
+    title: "Full Bathroom Refurbishment",
+    desc: "Existing layout retained but every surface replaced. Marble-effect large-format porcelain to walls and floor, new suite, chrome fixtures and fresh plastered ceiling throughout.",
+    cols: 2,
+    images: [
+      { src: "/assets/project1_before.jpg", label: "BEFORE" },
+      { src: "/assets/project1_after.jpg", label: "AFTER" },
+    ],
+  },
+  {
+    num: "03",
+    loc: "Brentwood",
+    title: "Bath-to-Shower Conversion",
+    desc: "Bath removed and room reconfigured into a dedicated shower room. Plastered walls, large-format dark slate flooring, quadrant enclosure and compact wall-hung vanity.",
+    cols: 2,
+    images: [
+      { src: "/assets/project2_before.jpg", label: "BEFORE" },
+      { src: "/assets/project2_after.jpg", label: "AFTER" },
+    ],
+  },
 ];
 
 function WorkHero() {
@@ -43,30 +72,37 @@ function Gallery() {
       <div className="gallery-inner">
         <div className="gallery-head">
           <div>
-            <div className="sec-eyebrow"><span className="rule"/> Selected Projects</div>
+            <div className="sec-eyebrow"><span className="rule"/> Case Studies</div>
             <h2 className="h2 h2-md" style={{ margin: 0 }}>
-              A small portfolio.<br/>
+              Three recent projects.<br/>
               <em style={{ fontFamily: "var(--serif-font)", fontStyle: "italic", fontWeight: 400, color: "var(--brand)" }}>
-                Built carefully.
+                Documented properly.
               </em>
             </h2>
           </div>
-          <div style={{ color: "var(--t-3)", fontSize: 14, maxWidth: 380, textAlign: "right" }}>
-            Six recent projects — there are dozens more. Get in touch to see work
-            similar to your own scope and style.
+          <div style={{ color: "var(--t-3)", fontSize: 14, maxWidth: 360, textAlign: "right" }}>
+            Before, during, and after — every project shown is completed by our own team with no subcontracted trades.
           </div>
         </div>
-        <div className="gallery-grid">
-          {PROJECTS.map((p, i) => (
-            <article key={i} className={`gal-card ${p.cls}`}>
-              <div className="gal-card-img" style={{ backgroundImage: `url(${p.img})` }}/>
-              <div className="gal-card-grad"/>
-              <div className="gal-card-content">
-                <span className="gal-card-loc">{p.loc}</span>
-                <h3>{p.title}</h3>
-                <p>{p.desc}</p>
+        <div>
+          {CASE_STUDIES.map((cs) => (
+            <div key={cs.num} className="case-study">
+              <div className="case-study-head">
+                <div>
+                  <div className="case-study-eyebrow">{cs.num} — {cs.loc}</div>
+                  <div className="case-study-title">{cs.title}</div>
+                  <p className="case-study-desc">{cs.desc}</p>
+                </div>
+                <span className="case-study-loc">{cs.loc}</span>
               </div>
-            </article>
+              <div className="case-imgs" style={{ "--cols": cs.cols }}>
+                {cs.images.map((img, i) => (
+                  <div key={i} className="case-img" style={{ backgroundImage: `url(${img.src})` }}>
+                    <span className="case-img-label">{img.label}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
           ))}
         </div>
       </div>
