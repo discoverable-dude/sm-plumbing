@@ -43,6 +43,29 @@ const CASE_STUDIES = [
       { src: "/assets/projects/project2_after.jpg", label: "AFTER" },
     ],
   },
+  {
+    num: "04",
+    loc: "Chelmsford",
+    title: "Character Cloakroom Refurbishment",
+    desc: "Period property cloakroom stripped back and completely reimagined. Black gloss metro tiles, decorative geometric floor, ribbed freestanding basin and wall-hung WC — all working with the original exposed beam.",
+    cols: 2,
+    images: [
+      { src: "/assets/projects/project4_before.jpg", label: "BEFORE" },
+      { src: "/assets/projects/project4_after.jpg", label: "AFTER" },
+    ],
+  },
+  {
+    num: "05",
+    loc: "Hornchurch",
+    title: "Cloakroom-to-Shower Room Conversion",
+    desc: "Narrow WC fully gutted and reconfigured into a functional shower room. Grey stone-effect tiling, integrated vanity unit, sliding glass shower enclosure and recessed ceiling lighting.",
+    cols: 3,
+    images: [
+      { src: "/assets/projects/project5_before.jpg", label: "BEFORE" },
+      { src: "/assets/projects/project5_during.jpg", label: "DURING" },
+      { src: "/assets/projects/project5_after.jpg", label: "AFTER" },
+    ],
+  },
 ];
 
 function WorkHero() {
@@ -74,7 +97,7 @@ function Gallery() {
           <div>
             <div className="sec-eyebrow"><span className="rule"/> Case Studies</div>
             <h2 className="h2 h2-md" style={{ margin: 0 }}>
-              Three recent projects.<br/>
+              Five recent projects.<br/>
               <em style={{ fontFamily: "var(--serif-font)", fontStyle: "italic", fontWeight: 400, color: "var(--brand)" }}>
                 Documented properly.
               </em>
