@@ -15,10 +15,10 @@ const CASE_STUDIES = [
     desc: "Complete strip-out to brick. Re-routed plumbing, tanked walls and floor, large-format terrazzo tiling, wall-hung vanity and rain-head shower. The room was reconfigured from a standard bathroom layout.",
     cols: 4,
     images: [
-      { src: "/assets/project3_before.jpg", label: "BEFORE" },
-      { src: "/assets/project3_during.jpg", label: "DURING" },
-      { src: "/assets/project3_after_1.jpg", label: "AFTER" },
-      { src: "/assets/project3_after_2.jpg", label: "AFTER" },
+      { src: "/assets/projects/project3_before.jpg", label: "BEFORE" },
+      { src: "/assets/projects/project3_during.jpg", label: "DURING" },
+      { src: "/assets/projects/project3_after_1.jpg", label: "AFTER" },
+      { src: "/assets/projects/project3_after_2.jpg", label: "AFTER" },
     ],
   },
   {
@@ -28,8 +28,8 @@ const CASE_STUDIES = [
     desc: "Existing layout retained but every surface replaced. Marble-effect large-format porcelain to walls and floor, new suite, chrome fixtures and fresh plastered ceiling throughout.",
     cols: 2,
     images: [
-      { src: "/assets/project1_before.jpg", label: "BEFORE" },
-      { src: "/assets/project1_after.jpg", label: "AFTER" },
+      { src: "/assets/projects/project1_before.jpg", label: "BEFORE" },
+      { src: "/assets/projects/project1_after.jpg", label: "AFTER" },
     ],
   },
   {
@@ -39,8 +39,8 @@ const CASE_STUDIES = [
     desc: "Bath removed and room reconfigured into a dedicated shower room. Plastered walls, large-format dark slate flooring, quadrant enclosure and compact wall-hung vanity.",
     cols: 2,
     images: [
-      { src: "/assets/project2_before.jpg", label: "BEFORE" },
-      { src: "/assets/project2_after.jpg", label: "AFTER" },
+      { src: "/assets/projects/project2_before.jpg", label: "BEFORE" },
+      { src: "/assets/projects/project2_after.jpg", label: "AFTER" },
     ],
   },
 ];
