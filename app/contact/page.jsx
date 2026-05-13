@@ -44,7 +44,7 @@ function ContactMap() {
             <div className="map-card-h">SM Plumbing &amp; Property Services</div>
             <div className="map-card-sub">Basildon, Essex · Serving SS, RM, CM &amp; surrounding</div>
           </div>
-          <a href="tel:" className="btn btn-primary btn-sm"><Phone size={14}/> 07XXX XXXXXX</a>
+          <a href="tel:07795514198" className="btn btn-primary btn-sm"><Phone size={14}/> 0779 5514198</a>
         </div>
       </div>
     </section>
