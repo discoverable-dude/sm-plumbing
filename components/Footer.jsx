@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { LogoMark, Phone, Insta, Fb } from "./Icons";
+import { LogoMark, Phone, Insta } from "./Icons";
 
 const TOWN_PAGES = [
   { name: "Basildon",   href: "/bathroom-fitter-basildon"   },
@@ -46,8 +46,7 @@ export function Footer() {
           <a className="foot-phone" href="tel:01375430300"><Phone size={16}/> 01375 430300</a>
           <div className="foot-hours">Mon–Sat · 7am – 6pm</div>
           <div className="foot-socials">
-            <a href="#" className="soc"><Insta size={16}/></a>
-            <a href="#" className="soc"><Fb size={16}/></a>
+            <a href="https://www.instagram.com/smpandp/" target="_blank" rel="noopener noreferrer" className="soc"><Insta size={16}/></a>
           </div>
         </div>
       </div>
