@@ -44,7 +44,7 @@ function ContactMap() {
             <div className="map-card-h">SM Plumbing &amp; Property Services</div>
             <div className="map-card-sub">Basildon, Essex · Serving SS, RM, CM &amp; surrounding</div>
           </div>
-          <a href="tel:07795514198" className="btn btn-primary btn-sm"><Phone size={14}/> 07795 514198</a>
+          <a href="tel:01375430300" className="btn btn-primary btn-sm"><Phone size={14}/> 01375 430300</a>
         </div>
       </div>
     </section>

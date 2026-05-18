@@ -72,7 +72,7 @@ export function ContactSection({ hideDescriptions = false }) {
               <span/>or call direct<span/>
             </div>
             <div className="cta-direct">
-              <a href="tel:07795514198" className="cta-direct-phone"><Phone size={16}/> 07795 514198</a>
+              <a href="tel:01375430300" className="cta-direct-phone"><Phone size={16}/> 01375 430300</a>
               <a href="mailto:smpandp@hotmail.com" className="cta-direct-mail">smpandp@hotmail.com</a>
               <div className="cta-direct-hours">Mon–Sat · 7am – 6pm</div>
             </div>

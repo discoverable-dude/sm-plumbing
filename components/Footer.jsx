@@ -43,7 +43,7 @@ export function Footer() {
         </div>
         <div className="foot-col">
           <div className="foot-h">DIRECT CONTACT</div>
-          <a className="foot-phone" href="tel:07795514198"><Phone size={16}/> 07795 514198</a>
+          <a className="foot-phone" href="tel:01375430300"><Phone size={16}/> 01375 430300</a>
           <div className="foot-hours">Mon–Sat · 7am – 6pm</div>
           <div className="foot-socials">
             <a href="#" className="soc"><Insta size={16}/></a>
