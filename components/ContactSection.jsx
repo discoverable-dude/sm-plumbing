@@ -25,8 +25,23 @@ function FieldTextarea({ label, value, onChange }) {
 function QuickContactForm() {
   const [form, setForm] = useState({ name: "", email: "", phone: "", note: "" });
   const [sent, setSent] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState(false);
   const set = (k) => (e) => setForm(f => ({ ...f, [k]: e.target.value }));
-  const submit = (e) => { e.preventDefault(); setSent(true); };
+  const submit = async (e) => {
+    e.preventDefault();
+    setSubmitting(true);
+    setError(false);
+    try {
+      const res = await fetch("https://formspree.io/f/mwvzkygl", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "Accept": "application/json" },
+        body: JSON.stringify({ ...form, _subject: `Website message from ${form.name}` }),
+      });
+      if (res.ok) { setSent(true); } else { setError(true); }
+    } catch { setError(true); }
+    finally { setSubmitting(false); }
+  };
 
   if (sent) {
     return (
@@ -47,7 +62,8 @@ function QuickContactForm() {
         <FieldInput label="Phone (optional)" value={form.phone} onChange={set("phone")}/>
       </div>
       <FieldTextarea label="How can we help?" value={form.note} onChange={set("note")}/>
-      <button className="btn btn-ghost btn-block" type="submit">Send Message <Arrow size={14}/></button>
+      {error && <p style={{ color: "var(--brand)", fontSize: 13, margin: 0 }}>Something went wrong — please try again or call us directly.</p>}
+      <button className="btn btn-ghost btn-block" type="submit" disabled={submitting}>{submitting ? "Sending…" : "Send Message"} <Arrow size={14}/></button>
     </form>
   );
 }

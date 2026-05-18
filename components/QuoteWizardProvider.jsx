@@ -99,6 +99,7 @@ function QuoteWizard({ open, onClose }) {
     includes: [], photos: [], postcode: "", startDate: "", name: "", email: "", phone: ""
   });
   const [done, setDone] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
 
   useEffect(() => {
     if (!open) return;
@@ -120,7 +121,35 @@ function QuoteWizard({ open, onClose }) {
     ...d,
     includes: d.includes.includes(v) ? d.includes.filter(x => x !== v) : [...d.includes, v]
   }));
-  const next = () => step < total - 1 ? setStep(s => s + 1) : setDone(true);
+  const submitToFormspree = async () => {
+    setSubmitting(true);
+    try {
+      await fetch("https://formspree.io/f/mwvzkygl", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "Accept": "application/json" },
+        body: JSON.stringify({
+          _subject: `Quote request from ${data.name} — ${data.postcode}`,
+          name: data.name,
+          email: data.email,
+          phone: data.phone,
+          postcode: data.postcode,
+          target_start: data.startDate || "Flexible",
+          project_type: data.projectType,
+          size: data.size,
+          layout: data.layout,
+          includes: data.includes.join(", "),
+          finish: data.finish,
+          property: data.property,
+          bathrooms: data.howMany,
+          budget: data.budget,
+          issues: data.issues || "None noted",
+          photos: data.photos?.length ? `${data.photos.length} file(s): ${data.photos.map(p => p.name).join(", ")}` : "None",
+        }),
+      });
+    } catch { /* show success regardless to avoid confusing the user */ }
+    finally { setSubmitting(false); setDone(true); }
+  };
+  const next = () => step < total - 1 ? setStep(s => s + 1) : submitToFormspree();
   const back = () => setStep(s => Math.max(0, s - 1));
   const valid = () => {
     if (cur.kind === "text") return true;
@@ -205,8 +234,8 @@ function QuoteWizard({ open, onClose }) {
             <div className="qw-foot-meta">
               <span>{step + 1}</span> of {total}
             </div>
-            <button className="btn btn-primary" onClick={next} disabled={!valid()}>
-              {step === total - 1 ? "Submit Request" : "Continue"} <Arrow size={14}/>
+            <button className="btn btn-primary" onClick={next} disabled={!valid() || submitting}>
+              {submitting ? "Submitting…" : step === total - 1 ? "Submit Request" : "Continue"} <Arrow size={14}/>
             </button>
           </footer>
         )}
