@@ -66,6 +66,29 @@ const CASE_STUDIES = [
       { src: "/assets/projects/project5_after.jpg", label: "AFTER" },
     ],
   },
+  {
+    num: "06",
+    loc: "Basildon",
+    title: "Room-to-Shower Conversion",
+    desc: "Bedroom space converted into a new en-suite shower room. Full plastering and boarding, new door, dark metro-tiled shower enclosure, vanity unit and light stone floor tiles.",
+    cols: 3,
+    images: [
+      { src: "/assets/projects/project-6-before.jpg", label: "BEFORE" },
+      { src: "/assets/projects/project-6-during.jpg", label: "DURING" },
+      { src: "/assets/projects/project-6-after.jpg", label: "AFTER" },
+    ],
+  },
+  {
+    num: "07",
+    loc: "Chelmsford",
+    title: "Accessible Bathroom to Wet Room",
+    desc: "Dated adapted bathroom fully stripped and rebuilt as a modern wet room. Floor-to-ceiling marble-effect large-format tiling, frameless glass panel, new suite and concealed-cistern WC.",
+    cols: 2,
+    images: [
+      { src: "/assets/projects/project-7-before.jpg", label: "BEFORE" },
+      { src: "/assets/projects/project-7-after.jpg", label: "AFTER" },
+    ],
+  },
 ];
 
 function WorkHero() {
@@ -97,7 +120,7 @@ function Gallery() {
           <div>
             <div className="sec-eyebrow"><span className="rule"/> Case Studies</div>
             <h2 className="h2 h2-md" style={{ margin: 0 }}>
-              Five recent projects.<br/>
+              Seven recent projects.<br/>
               <em style={{ fontFamily: "var(--serif-font)", fontStyle: "italic", fontWeight: 400, color: "var(--brand)" }}>
                 Documented properly.
               </em>
