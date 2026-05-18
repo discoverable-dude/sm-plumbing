@@ -663,34 +663,60 @@ button { font-family: inherit; cursor: pointer; }
 }
 .process-step:last-child::before { display: none; }
 
-/* ───────── testimonial ───────── */
-.testimonial { background: var(--bg-1); padding: 120px var(--gutter); }
-.testimonial-inner { max-width: 920px; margin: 0 auto; text-align: center; position: relative; }
-.quote-mark {
-  font-family: var(--serif-font);
-  font-size: 180px;
-  line-height: 0.6;
-  color: var(--brand);
-  height: 80px;
-  margin-bottom: 16px;
+/* ───────── Reviews ───────── */
+.reviews { background: var(--bg-1); }
+.reviews-head {
+  display: flex; align-items: flex-start; justify-content: space-between;
+  gap: 32px; margin-bottom: 56px; flex-wrap: wrap;
 }
-.testimonial blockquote {
-  font-family: var(--display-font);
-  font-weight: 500;
-  font-size: clamp(26px, 2.6vw, 38px);
-  line-height: 1.32;
-  letter-spacing: -0.02em;
-  color: var(--t-1);
-  margin: 0 0 40px;
-  text-wrap: balance;
+.checkatrade-badge {
+  display: flex; align-items: center; gap: 16px;
+  background: var(--bg-0); border: 1px solid var(--line);
+  border-radius: var(--r-lg); padding: 20px 24px;
+  text-decoration: none; flex-shrink: 0;
+  transition: border-color .2s ease;
 }
-.quote-meta { display: flex; flex-direction: column; gap: 8px; align-items: center; }
-.qm-stars { display: flex; gap: 2px; color: var(--brand); margin-bottom: 6px; }
-.qm-name {
+.checkatrade-badge:hover { border-color: var(--brand); }
+.checkatrade-score {
   font-family: var(--display-font); font-weight: 800;
-  font-size: 14px; letter-spacing: 0.06em; color: var(--t-1);
+  font-size: 42px; line-height: 1; color: var(--brand); letter-spacing: -0.03em;
 }
-.qm-proj { font-size: 13px; color: var(--t-3); letter-spacing: 0.04em; }
+.checkatrade-score span { font-size: 20px; color: var(--t-3); }
+.checkatrade-label {
+  font-family: var(--display-font); font-weight: 700;
+  font-size: 12px; line-height: 1.5; letter-spacing: 0.04em;
+  color: var(--t-2); text-transform: uppercase;
+}
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.review-card {
+  background: var(--bg-0); border: 1px solid var(--line);
+  border-radius: var(--r-lg); padding: 28px;
+  display: flex; flex-direction: column; gap: 12px;
+}
+.review-stars { display: flex; gap: 3px; color: var(--brand); }
+.review-title {
+  font-family: var(--display-font); font-weight: 700;
+  font-size: 15px; color: var(--t-1);
+}
+.review-text {
+  font-size: 14px; line-height: 1.7; color: var(--t-2);
+  margin: 0; flex: 1;
+}
+.review-meta {
+  display: flex; justify-content: space-between; align-items: center;
+  gap: 8px; padding-top: 12px; border-top: 1px solid var(--line);
+  flex-wrap: wrap;
+}
+.review-loc {
+  font-family: var(--display-font); font-weight: 700;
+  font-size: 11px; letter-spacing: 0.1em; color: var(--brand);
+  text-transform: uppercase;
+}
+.review-date { font-size: 12px; color: var(--t-3); }
 
 /* ───────── service areas ───────── */
 .areas { background: var(--bg-0); }
@@ -1749,9 +1775,12 @@ button { font-family: inherit; cursor: pointer; }
 @media (max-width: 880px) {
   .narrative-inner { grid-template-columns: 1fr; gap: 40px; }
   .services-bento { grid-template-columns: repeat(2, 1fr); }
+  .reviews-grid { grid-template-columns: repeat(2, 1fr); }
   .svc-card-hero, .svc-card-tall, .svc-card-wide, .svc-card-sm { grid-column: span 2; grid-row: auto; }
   .case-imgs { --cols: 2; }
   .why-choose-list { grid-template-columns: 1fr; }
+  .reviews-grid { grid-template-columns: 1fr; }
+  .checkatrade-badge { width: 100%; }
   .trust-row { grid-template-columns: repeat(2, 1fr); }
   .approach-bento { grid-template-columns: 1fr; }
   .ab-tech, .ab-quality, .ab-local, .ab-material { grid-column: span 1; grid-row: auto; }
