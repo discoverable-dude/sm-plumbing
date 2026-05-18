@@ -35,8 +35,7 @@ function StorySection() {
         <div>
           <div className="sec-eyebrow"><span className="rule"/> The Story</div>
           <h2 className="narrative-h">
-            Fully managed, <em>start to finish.</em><br/>
-            No third-party contractors.
+            Fully managed, <em>start to finish.</em>
           </h2>
           <div className="narrative-rule"/>
           <p>

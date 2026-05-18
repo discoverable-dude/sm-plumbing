@@ -50,8 +50,7 @@ function ServicesBento() {
         <div className="sec-eyebrow"><span className="rule"/> What We Build</div>
         <h2 className="h2">A complete renovation, <br/>delivered by one specialist team.</h2>
         <p className="body" style={{ maxWidth: "60ch" }}>
-          We don&apos;t subcontract the trades that matter — every part of your bathroom is built
-          by people who answer directly to you.
+          Every part of your bathroom is built by people who answer directly to you.
         </p>
         <div className="services-bento">
           <div className="svc-card svc-card-hero">

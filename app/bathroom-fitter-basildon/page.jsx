@@ -108,7 +108,7 @@ function WhyChooseUs({ t }) {
           <div className="why-card">
             <div className="why-card-num">03</div>
             <h3>Fully Managed</h3>
-            <p>Single point of contact, single team, single fixed price. No subcontractor surprises mid-build.</p>
+            <p>Single point of contact, single team, single fixed price.</p>
           </div>
         </div>
         <div className="trust-row">

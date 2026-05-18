@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export const metadata = {
   title: "Our Work",
-  description: "A selection of recently completed bathroom renovations across Essex. Every project delivered by our own team — no third-party contractors.",
+  description: "A selection of recently completed bathroom renovations across Essex. Every project delivered by our own team.",
 };
 
 const CASE_STUDIES = [
@@ -82,7 +82,7 @@ function WorkHero() {
         </h1>
         <p className="lede">
           A selection of recently completed renovations across Essex. Every project
-          delivered by our own team — no third-party contractors.
+          delivered by our own team.
         </p>
       </div>
     </section>
@@ -104,7 +104,7 @@ function Gallery() {
             </h2>
           </div>
           <div style={{ color: "var(--t-3)", fontSize: 14, maxWidth: 360, textAlign: "right" }}>
-            Before, during, and after — every project shown is completed by our own team with no subcontracted trades.
+            Before, during, and after — every project shown is completed by our own team.
           </div>
         </div>
         <div>
